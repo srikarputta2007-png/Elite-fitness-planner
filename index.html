@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Elite Fitness Planner</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Elite Fitness Planner</h1>
+<p class="subtitle">Smart workout & diet generator</p>
+
+<div id="formSection">
+
+<input type="text" id="name" placeholder="Enter Name">
+
+<input type="number" id="age" placeholder="Age">
+
+<input type="number" id="weight" placeholder="Weight (kg)">
+
+<input type="number" id="height" placeholder="Height (cm)">
+
+<select id="goal">
+<option value="gain">Muscle Gain</option>
+<option value="loss">Fat Loss</option>
+<option value="maintain">Maintain Weight</option>
+</select>
+
+<button onclick="start()">Create My Plan</button>
+
+</div>
+
+<div id="menu" class="hidden">
+
+<h2>Welcome <span id="username"></span> 💪</h2>
+
+<div class="grid">
+
+<button onclick="showBMI()">BMI</button>
+<button onclick="showCalories()">Calories</button>
+
+<button onclick="showWorkout()">Workout</button>
+<button onclick="showDiet()">Diet</button>
+
+<button onclick="showProgress()">Progress</button>
+<button onclick="showChart()">Weight Chart</button>
+
+<button onclick="showTimer()">Workout Timer</button>
+
+</div>
+
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Login - Elite Fitness Planner</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.login-box{
+width:400px;
+background:#1e293b;
+padding:35px;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>Elite Fitness Planner</h1>
+<p class="subtitle">Login to Continue</p>
+
+<input type="text" id="username" placeholder="Enter Username">
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+<p id="error" style="color:red;margin-top:10px;"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+/* simple login */
+
+if(user==="admin" && pass==="1234"){
+
+localStorage.setItem("user",user);
+
+window.location.href="index.html";
+
+}
+else{
+
+document.getElementById("error").innerText="Invalid Username or Password";
+
+}
+
+}
+if(!localStorage.getItem("user")){
+window.location.href="login.html";
+}
+
+</script>
+
+</body>
+</html>
